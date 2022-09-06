@@ -13,3 +13,83 @@
  *= require_tree .
  *= require_self
  */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
+
+:root {
+  --main-font: 'Montserrat', sans-serif;
+  --main-bg-color: #f5f6f8;
+  --main-color: #3778c2;
+  --secondary-color: #5fb523;
+  --text-main-color: #434b54;
+  --text-secondry-color: #bfc0c0;
+  --header-color: white;
+}
+
+body {
+  margin: 0;
+  background-color: var(--main-bg-color);
+  color: var(--text-main-color);
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--header-color);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--main-color);
+  color: var(--header-color);
+  padding: 1.5em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em 0;
+  background-color: white;
+  text-align: center;
+}
+
+form input {
+  width: 100%;
+  border: none;
+  padding: 1em;
+}
+
+form hr {
+  border-bottom: none;
+  width: 90%;
+}
+
+.forgot-password {
+  padding: 1em;
+  text-align: center;
+}
+
+.forgot-password a {
+  color: var(--text-secondry-color);
+}
+
+.forget-password-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  padding: 1em;
+}
+
+.forget-password-actions a {
+  color: var(--main-color);
+}

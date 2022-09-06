@@ -1,0 +1,26 @@
+<%= render "devise/shared/header", :locals => {:action => "Sign Up"} %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.text_field :id, autofocus: true, autocomplete: "full name", placeholder: "Full name" %>
+    <hr>
+  </div>
+
+  <div class="field">
+    <%= f.email_field :email, autofocus: false, autocomplete: "email", placeholder: "Email" %>
+    <hr>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password" %>
+    <hr>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirm password" %>
+    <hr>
+  </div>
+
+<% end %>
+

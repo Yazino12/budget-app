@@ -1,0 +1,20 @@
+<%= render "devise/shared/header", :locals => {:action => "Log In"} %>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
+    <hr>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password" %>
+    <hr>
+  </div>
+
+<% end %>
+
+<div class="forgot-password">
+<%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+  <%= link_to "Forgot password?", new_password_path(resource_name) %><br />
+<% end %>
+</div>
+
