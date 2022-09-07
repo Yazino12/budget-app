@@ -1,5 +1,7 @@
 <div class="header">
-  <i class="fa-solid fa-arrow-left fa-xl"></i>
+  <%= link_to root_path() do%>
+    <i class="fa-solid fa-arrow-left fa-xl"></i>
+  <% end %>
   <% if locals[:action] == "Log In" %>
     <h3> <%= locals[:action].delete(" ").upcase %> </h3>
     <%= link_to locals[:action], user_session_path(), class: "button post-button" %>
