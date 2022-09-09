@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/-Yazino12-yellow)
 
-# Budget app
+# Budget App
 
 > Budget app is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 
@@ -96,6 +96,7 @@ rspec spec
 **Live**
 
 - Live app: [Budget App](https://floating-peak-60648.herokuapp.com/)
+- `Current app is better viewed in` **mobile screens**
 
 ## Author
 
