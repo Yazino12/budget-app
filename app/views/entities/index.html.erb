@@ -20,7 +20,7 @@
   <% @entities.each_with_index do |entity, i| %>
     <div class="entity">
       <div class="upper">
-        <p class="transaction-num">Transaction Nº<%= i + 1 %>41200032</p>
+        <p class="transaction-num"><%= entity.name %> Nº<%= i + 1 %>41200032</p>
         <div><i class="fa-solid fa-calendar"></i><span class="entity-span"><%= entity.created_at.strftime("%d %b %Y") %></span></div>
       </div>
       
