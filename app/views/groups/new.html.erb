@@ -1,0 +1,23 @@
+<%= form_with model: @group, url: groups_path, method: :post, local: true  do |f| %>
+    <div class="header">
+    <%= link_to groups_path() do%>
+      <i class="fa-solid fa-arrow-left fa-xl"></i>
+    <% end %>
+    <h3> ADD NEW CATEGORY </h3>
+    <%= f.submit "SAVE", class: "submit-button" %>
+  </div>
+    
+</div>
+    <div class="field">
+    <%= f.text_field :name, autocomplete: "Category-name", placeholder: "name", require: true %>
+      <hr>
+    </div>
+  
+    <div class="field">
+      <%= f.text_field :icon, autocomplete: "Icon-link", placeholder: "icon", require: true %>
+      <hr>
+    </div>
+  
+</div>
+
+<% end %>

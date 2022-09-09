@@ -57,12 +57,40 @@ a {
   padding: 1.5em;
 }
 
+.header.home {
+  flex-direction: column;
+  gap: 1em;
+}
+
+.header .upper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.header .lower {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1em;
+  width: 100%;
+}
+
+.header .lower .current span {
+  font-weight: bold;
+  margin-left: 2.5em;
+}
+
+.header .lower .away {
+  color: var(--text-secondry-color);
+}
+
 .splash {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   gap: 1em;
-  min-height: 812px;
+  min-height: 760px;
   background:
     linear-gradient(
       177deg,
@@ -122,11 +150,17 @@ a {
   transition-duration: 0.1s;
 }
 
+.author-info {
+  text-align: center;
+  padding: 1em;
+  background-color: #04cdfa;
+  color: var(--header-color);
+}
+
 form {
   display: flex;
   flex-direction: column;
   gap: 1em;
-  padding: 1em 0;
   background-color: white;
   text-align: center;
 }
@@ -137,6 +171,14 @@ form input {
   padding: 1em;
 }
 
+form .submit-button {
+  width: auto;
+  background-color: transparent;
+  padding: 0;
+  color: var(--header-color);
+}
+
+hr,
 form hr {
   border-bottom: none;
   width: 90%;
@@ -160,4 +202,127 @@ form hr {
 
 .forget-password-actions a {
   color: var(--main-color);
+}
+
+.groups {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 0.5em;
+}
+
+.groups .group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--header-color);
+  padding: 0.5em;
+  color: var(--text-secondry-color);
+}
+
+.groups .group .left {
+  display: flex;
+  gap: 1em;
+}
+
+.groups .group .middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.groups .group .middle span,
+.entity .upper .entity-span {
+  font-size: small;
+}
+
+.total-transactions .bold,
+.groups .group .bold,
+.entity .payment .bold {
+  color: var(--text-main-color);
+  font-weight: bold;
+}
+
+.kick-user,
+.new-group-button {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  padding: 0 16px;
+  background-color: var(--main-color);
+  border-radius: 0.25rem;
+  border: 1px solid #0070d2;
+  color: #fff;
+  font-size: 13px;
+  line-height: 30px;
+  font-weight: 400;
+  text-align: center;
+  width: 20%;
+  align-self: flex-end;
+}
+
+.kick-user:hover {
+  background-color: #005fb2;
+  border-color: #005fb2;
+}
+
+.new-group-button {
+  width: 200px;
+  margin: auto;
+}
+
+.entities-wrapper {
+  padding: 1em;
+}
+
+.entities {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--header-color);
+}
+
+.total-transactions {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  margin: 1em 1em 0 1em;
+  background-color: var(--header-color);
+}
+
+.entities .group-entity {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+}
+
+.entities .entity {
+  display: flex;
+  flex-direction: column;
+}
+
+.entities .entity .upper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  padding: 1em;
+}
+
+.entities .entity .upper div {
+  display: flex;
+  gap: 0.5em;
+  color: var(--text-secondry-color);
+}
+
+.entities .entity .payment {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.entities .add-transaction {
+  display: flex;
+  justify-content: center;
+  padding: 1em;
 }

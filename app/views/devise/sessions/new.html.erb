@@ -1,5 +1,12 @@
-<%= render "devise/shared/header", :locals => {:action => "Log In"} %>
+
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="header">
+  <%= link_to root_path() do%>
+    <i class="fa-solid fa-arrow-left fa-xl"></i>
+  <% end %>
+  <h3> LOGIN </h3>
+  <%= f.submit "Log In", class: "submit-button" %>
+</div>
   <div class="field">
     <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
     <hr>
