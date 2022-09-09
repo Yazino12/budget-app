@@ -1,0 +1,38 @@
+<div class="header">
+    <%= link_to groups_path() do%>
+      <i class="fa-solid fa-arrow-left fa-xl"></i>
+    <% end %>
+    <h3> TRANSACTIONS </h3>
+    <p></p>
+</div>
+
+<div class="total-transactions">
+<p>Total transactions: </p>
+<p class="bold">$<%= @total_amount %></p>
+</div>
+<div class="entities-wrapper">
+<div class="entities">
+<div class="group-entity">
+<%= image_tag @group.icon, alt: 'icon', width: '50', height: '50', class: "icon" %>
+<p><%= @group.name %></p>
+</div>
+<hr>
+  <% @entities.each_with_index do |entity, i| %>
+    <div class="entity">
+      <div class="upper">
+        <p class="transaction-num">Transaction Nº<%= i + 1 %>41200032</p>
+        <div><i class="fa-solid fa-calendar"></i><span class="entity-span"><%= entity.created_at.strftime("%d %b %Y") %></span></div>
+      </div>
+      
+      <div class="payment">
+        <p class="total">TOTAL PAYMENT</p>
+        <p class="bold">$<%= entity.amount %></p>
+      </div>
+    </div>
+    <hr>
+  <% end %>
+  <div class="add-transaction">
+  <%= link_to "add a new transaction", new_group_entity_path(), class: "new-group-button" %>
+  </div>
+</div>
+</div>
