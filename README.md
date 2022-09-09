@@ -8,10 +8,11 @@
   Demo 📝
 </h2>
 
-| **Home Page** | **Categories Page** | **Transactions Page** |
-
-| :------------------------: | :-----------------------------: | :--------------------------: |
-| <img src="https://user-images.githubusercontent.com/43172164/189333372-1b5d2f74-477e-4a45-83d6-39e7c5c10617.png" width="375" height="812"> | <img src="https://user-images.githubusercontent.com/43172164/189334987-75fabe99-4a25-48cf-9381-413f60405029.png" width="375" height="812"> | <img src="https://user-images.githubusercontent.com/43172164/189335876-63d4a600-ca8c-464f-86d4-5c757ba4cbd3.png" width="375" height="812"> |
+<div style="display:flex;">
+<img src="https://user-images.githubusercontent.com/43172164/189333372-1b5d2f74-477e-4a45-83d6-39e7c5c10617.png" width="25%" height="500" >
+<img src="https://user-images.githubusercontent.com/43172164/189334987-75fabe99-4a25-48cf-9381-413f60405029.png" width="25%" height="500" >
+<img src="https://user-images.githubusercontent.com/43172164/189335876-63d4a600-ca8c-464f-86d4-5c757ba4cbd3.png" width="25%" height="500" >
+</div>
 
 ## Built With
 
@@ -108,11 +109,13 @@ rspec spec
 
 Contributions, issues, and feature requests are welcome!
 
+## Issues
+
+Feel free to check the [issues page](https://github.com/Yazino12/budget-app/issues).
+
 ## Credits
 
 Original design idea by: [Gregoire Vella on Behance](https://www.behance.net/gregoirevella)
-
-Feel free to check the [issues page](https://github.com/Yazino12/budget-app/issues).
 
 ## Show your support
 
