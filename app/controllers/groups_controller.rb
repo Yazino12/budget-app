@@ -19,12 +19,10 @@ class GroupsController < ApplicationController
   def create
     @group = current_user.groups.new(group_params)
 
-    respond_to do |format|
-      if @group.save
-        format.html { redirect_to groups_path, notice: 'Category was successfully created.' }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-      end
+    if @group.save
+      redirect_to groups_path, flash: { success: 'Category was successfully created.' }
+    else
+      redirect_to new_group_path, flash: { error: @group.errors.full_messages }
     end
   end
 

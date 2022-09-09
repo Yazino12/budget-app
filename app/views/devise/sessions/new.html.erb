@@ -1,5 +1,7 @@
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  
   <div class="header">
   <%= link_to root_path() do%>
     <i class="fa-solid fa-arrow-left fa-xl"></i>

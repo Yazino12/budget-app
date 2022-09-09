@@ -11,12 +11,26 @@
   </head>
 
   <body>
-    <% if flash[:notice] %>
-    <p class="notice"><%= flash[:notice] %></p>
+    <% if notice %>
+    <p class="notice"><%= notice %></p>
 <% end %>
-<% if flash[:alert] %>
-    <p class="alert"><%= flash[:alert] %></p>
+<% if alert %>
+    <p class="alert"><%= alert %></p>
 <% end %>
+
+<% if flash[:success] %>
+  <p class="notice"><%= sanitize(flash[:success]) %></p>
+<% end %>
+<% if flash[:error] %>
+  <div class="alert">
+  <ul>
+    <% flash[:error].each do |e| %>
+      <li><%= e %></li>
+    <% end %>
+  </ul>
+  </div>
+<% end %>
+
 <%= yield %>
     
     <script src="https://kit.fontawesome.com/e32d72064d.js" crossorigin="anonymous"></script>

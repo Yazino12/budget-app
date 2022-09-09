@@ -16,13 +16,11 @@ class EntitiesController < ApplicationController
   def create
     @entity = current_user.entities.new(entity_params)
 
-    respond_to do |format|
-      if @entity.save
-        GroupEntity.create(group_id: params[:group_id], entity_id: @entity.id)
-        format.html { redirect_to group_entities_path, notice: 'Transaction was successfully created.' }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-      end
+    if @entity.save
+      GroupEntity.create(group_id: params[:group_id], entity_id: @entity.id)
+      redirect_to group_entities_path, flash: { success: 'Transaction was successfully created.' }
+    else
+      redirect_to new_group_entity_path, flash: { error: @entity.errors.full_messages }
     end
   end
 
