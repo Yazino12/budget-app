@@ -95,7 +95,7 @@ rspec spec
 
 **Live**
 
-- Live app: [Budget App](https://)
+- Live app: [Budget App](https://floating-peak-60648.herokuapp.com/)
 
 ## Author
 
