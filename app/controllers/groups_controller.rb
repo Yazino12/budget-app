@@ -14,33 +14,36 @@ class GroupsController < ApplicationController
 
   def new
     @group = Group.new
-    @icons = ['health','sneakers','food','electronics','cars','furniture']
+    @icons = %w[health sneakers food electronics cars furniture]
   end
 
   def create
     @group = current_user.groups.new(group_params)
-
-    case @group.icon 
-    when 'Health'
-      @group.icon = 'https://cdn-icons-png.flaticon.com/512/2382/2382461.png'
-    when 'Sneakers' 
-      @group.icon = 'https://cdn-icons-png.flaticon.com/512/2741/2741289.png'
-    when 'Food' 
-      @group.icon = 'https://cdn-icons-png.flaticon.com/512/2276/2276931.png'
-    when 'Electronics' 
-      @group.icon = 'https://cdn-icons-png.flaticon.com/512/1261/1261106.png'
-    when 'Cars' 
-      @group.icon = 'https://cdn-icons-png.flaticon.com/512/2330/2330453.png'
-    when 'Furniture' 
-      @group.icon = 'https://cdn-icons-png.flaticon.com/512/2590/2590525.png'
-    else
-      @group.icon = 'https://cdn-icons-png.flaticon.com/512/7734/7734301.png'
-    end
+    @group.icon = map_to_icon @group
 
     if @group.save
       redirect_to groups_path, flash: { success: 'Category was successfully created.' }
     else
       redirect_to new_group_path, flash: { error: @group.errors.full_messages }
+    end
+  end
+
+  def map_to_icon(category)
+    case category.icon
+    when 'Health'
+      'https://cdn-icons-png.flaticon.com/512/2382/2382461.png'
+    when 'Sneakers'
+      'https://cdn-icons-png.flaticon.com/512/2741/2741289.png'
+    when 'Food'
+      'https://cdn-icons-png.flaticon.com/512/2276/2276931.png'
+    when 'Electronics'
+      'https://cdn-icons-png.flaticon.com/512/1261/1261106.png'
+    when 'Cars'
+      'https://cdn-icons-png.flaticon.com/512/2330/2330453.png'
+    when 'Furniture'
+      'https://cdn-icons-png.flaticon.com/512/2590/2590525.png'
+    else
+      'https://cdn-icons-png.flaticon.com/512/7734/7734301.png'
     end
   end
 
