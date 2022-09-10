@@ -1,0 +1,30 @@
+<div class="header home">
+  <div class="upper">
+    <i class="fa-solid fa-bars fa-xl"></i>
+    <h3> CATEGORIES </h3>
+    <i class="fa-solid fa-search fa-xl"></i>
+  </div>
+  <div class="lower">
+    <p class="current">Most recent </br> <span>.</span></p>
+    <p class="away">Most ancient</p>
+  </div>
+</div>
+
+<div class="groups">
+  <%= link_to "Log Out", destroy_user_session_path(), class: "kick-user" %>
+  <% @groups.each_with_index do |group, i| %>
+    <%= link_to group_entities_path(group.id) do %>
+      <div class="group">
+        <div class="left">
+        <%= image_tag group.icon, alt: 'icon', width: '50', height: '50', class: "icon" %>
+          <div class="middle">
+            <p><%= group.name %></p>
+            <span><%= group.created_at.strftime("%d %b %Y") %></span>
+          </div>
+        </div>
+        <p class="bold">$<%= @total_amount[i] %></p>
+      </div>
+    <% end %>
+  <% end %>
+  <%= link_to "add a new category", new_group_path(), class: "new-group-button" %>
+</div>

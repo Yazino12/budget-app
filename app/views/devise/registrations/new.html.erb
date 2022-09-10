@@ -1,0 +1,34 @@
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  
+  <div class="header">
+  <%= link_to root_path() do%>
+    <i class="fa-solid fa-arrow-left fa-xl"></i>
+  <% end %>
+  <h3> REGISTER </h3>
+  <%= f.submit "Next", class: "submit-button" %>
+</div>
+
+  <div class="field">
+    <%= f.text_field :name, autofocus: true, autocomplete: "full name", placeholder: "Full name" %>
+    <hr>
+  </div>
+
+  <div class="field">
+    <%= f.email_field :email, autofocus: false, autocomplete: "email", placeholder: "Email" %>
+    <hr>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password" %>
+    <hr>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirm password" %>
+    <hr>
+  </div>
+
+<% end %>
+

@@ -1,0 +1,29 @@
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  
+  <div class="header">
+  <%= link_to root_path() do%>
+    <i class="fa-solid fa-arrow-left fa-xl"></i>
+  <% end %>
+  <h3> LOGIN </h3>
+  <%= f.submit "Log In", class: "submit-button" %>
+</div>
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
+    <hr>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password" %>
+    <hr>
+  </div>
+
+<% end %>
+
+<div class="forgot-password">
+<%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+  <%= link_to "Forgot password?", new_password_path(resource_name) %><br />
+<% end %>
+</div>
+
