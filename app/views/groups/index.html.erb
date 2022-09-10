@@ -16,7 +16,7 @@
     <%= link_to group_entities_path(group.id) do %>
       <div class="group">
         <div class="left">
-          <%= image_tag group.icon, alt: 'icon', width: '50', height: '50', class: "icon" %>
+        <%= image_tag group.icon, alt: 'icon', width: '50', height: '50', class: "icon" %>
           <div class="middle">
             <p><%= group.name %></p>
             <span><%= group.created_at.strftime("%d %b %Y") %></span>

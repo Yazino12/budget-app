@@ -14,7 +14,7 @@
     </div>
   
     <div class="field">
-      <%= f.text_field :icon, autocomplete: "Icon-link", placeholder: "icon", require: true %>
+      <%= f.select :icon, @icons.map { |v| v.capitalize }, {}, autocomplete: "Icon-link", placeholder: "icon", class: "drop-down", require: true %>
       <hr>
     </div>
   
