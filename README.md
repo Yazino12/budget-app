@@ -116,7 +116,7 @@ Feel free to check the [issues page](https://github.com/Yazino12/budget-app/issu
 
 ## Credits
 
-Original design idea by: [Gregoire Vella on Behance](https://www.behance.net/gregoirevella)
+Original design idea by: [Gregoire Vella on Behance.](https://www.behance.net/gregoirevella)
 
 ## Show your support
 
